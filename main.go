@@ -112,7 +112,7 @@ func createStripeSessionHandler(db *gorm.DB) gin.HandlerFunc {
 			LineItems: []*stripe.CheckoutSessionLineItemParams{
 				{
 					Name:     stripe.String(username),
-					Amount:   &amount, // Replace with your actual Price ID
+					Amount:   &amount,
 					Quantity: stripe.Int64(1),
 					Currency: stripe.String(string(stripe.CurrencyINR)),
 				},
